@@ -9,7 +9,7 @@ const {
     try {
       let printer = new ThermalPrinter({
         type: PrinterTypes.EPSON,
-        interface: "tcp://192.168.0.9:9100",
+        interface: "printer:EPSON TM-m30II 2",
         characterSet: CharacterSet.PC852_LATIN2,
         removeSpecialCharacters: false,
         lineCharacter: "=",
@@ -23,7 +23,18 @@ const {
   
       console.log("Printer status:", status);
   
-      // Continue with your printing logic using the 'printer' object if needed
+      if (status) {
+        // Print "Hello, World!" message
+        printer.println("Hello, World!");
+  
+        // Cut the paper
+        printer.cut();
+  
+        // Execute print job
+        const response = await printer.execute();
+  
+        console.log("Print job response:", response);
+      }
     } catch (error) {
       console.error("Error checking printer status:", error);
     }
