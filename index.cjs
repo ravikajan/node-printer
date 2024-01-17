@@ -1,10 +1,10 @@
 const escpos = require("escpos");
-escpos.Bluetooth = require("escpos-bluetooth");
+// escpos.Bluetooth = require("escpos-bluetooth");
 escpos.Network = require("escpos-network");
 
 const address = "00:01:90:66:09:FB";
 const channel = 1;
-const bluetoothDevice = new escpos.Bluetooth(address, channel);
+// const bluetoothDevice = new escpos.Bluetooth(address, channel);
 escpos.Network = require("escpos-network");
 
 const networkDevice = new escpos.Network("192.168.0.9", 9100);
