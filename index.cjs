@@ -17,7 +17,7 @@ const options = { encoding: "GB18030" /* default */ };
 
 const printer = new escpos.Printer(networkDevice, options);
 
-device.open(function (error) {
+networkDevice.open(function (error) {
   printer
     .font("a")
     .align("ct")
