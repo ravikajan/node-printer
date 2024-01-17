@@ -23,8 +23,18 @@ async function checkPrinterStatus() {
 
     console.log("Printer status:", status);
     if (status) {
-      // Print "Hello, World!" message
-      printer.println("Hello, World!");
+      printer.alignLeft();
+      printer.newLine();
+      printer.println("Hello World!");
+      printer.println(
+        "This is a long line that will be collapsed into two lines"
+      );
+      printer.drawLine();
+
+      printer.upsideDown(true);
+      printer.println("Hello World upside down!");
+      printer.upsideDown(false);
+      printer.drawLine();
 
       // Cut the paper
       printer.cut();
