@@ -9,7 +9,7 @@ async function checkPrinterStatus() {
   try {
     let printer = new ThermalPrinter({
       type: PrinterTypes.EPSON,
-      interface: "tcp://192.168.0.9:9100",
+      interface: "BD:00:01:90:66:09:FB",
       characterSet: CharacterSet.PC852_LATIN2,
       removeSpecialCharacters: false,
       lineCharacter: "=",
