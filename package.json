@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.cjs"
+    "dev": "node thermal.cjs"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ravikajan/node-printer#readme",
   "dependencies": {
     "escpos": "^3.0.0-alpha.6",
-    "escpos-usb": "^3.0.0-alpha.4"
+    "escpos-usb": "^3.0.0-alpha.4",
+    "node-thermal-printer": "^4.4.1"
   }
 }
