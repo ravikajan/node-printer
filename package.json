@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ravikajan/node-printer#readme",
   "dependencies": {
     "escpos": "^3.0.0-alpha.6",
+    "escpos-network": "^3.0.0-alpha.5",
     "escpos-usb": "^3.0.0-alpha.4",
     "node-thermal-printer": "^4.4.1"
   }

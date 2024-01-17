@@ -1,18 +1,21 @@
-const escpos = require('escpos');
-escpos.Bluetooth = require('escpos-bluetooth');
+const escpos = require("escpos");
+escpos.Bluetooth = require("escpos-bluetooth");
+escpos.Network = require("escpos-network");
 
-const address = '00:01:90:66:09:FB';
+const address = "00:01:90:66:09:FB";
 const channel = 1;
 const bluetoothDevice = new escpos.Bluetooth(address, channel);
-// const device  = new escpos.Network('localhost');
+escpos.Network = require("escpos-network");
+
+const networkDevice = new escpos.Network("192.168.0.9", 9100);
 // const device  = new escpos.Serial('/dev/usb/lp0');
 
-console.log(device)
+console.log(device);
 
 const options = { encoding: "GB18030" /* default */ };
 // encoding is optional
 
-const printer = new escpos.Printer(bluetoothDevice, options);
+const printer = new escpos.Printer(networkDevice, options);
 
 device.open(function (error) {
   printer
