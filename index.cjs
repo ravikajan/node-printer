@@ -10,7 +10,7 @@ escpos.Network = require("escpos-network");
 const networkDevice = new escpos.Network("192.168.0.9", 9100);
 // const device  = new escpos.Serial('/dev/usb/lp0');
 
-console.log(device);
+// console.log(device);
 
 const options = { encoding: "GB18030" /* default */ };
 // encoding is optional
