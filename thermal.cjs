@@ -6,8 +6,8 @@ const {
 } = require("node-thermal-printer");
 
 let printer = new ThermalPrinter({
-  type: PrinterTypes.STAR, // Printer type: 'star' or 'epson'
-  interface: "USB", // Use USB interface
+  type: PrinterTypes.EPSON, // Printer type: 'star' or 'epson'
+  interface: "printer:EPSON TM-m30II 2", // Use USB interface
   characterSet: CharacterSet.PC852_LATIN2, // Printer character set
   removeSpecialCharacters: false, // Removes special characters - default: false
   lineCharacter: "=", // Set character for lines - default: "-"
